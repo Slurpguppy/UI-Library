@@ -1,0 +1,164 @@
+:root {
+  --primary-color: #007bff;
+  --hover-color: #3395ff;
+  --secondary-color: #6c757d;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --font-size: 16px;
+  --padding: 10px 20px;
+  --border-radius: 5px;
+  --transition-speed: 0.3s;
+}
+
+/* Base Button */
+.btn {
+  display: inline-block;
+  color: white;
+  background-color: var(--primary-color);
+  border-radius: var(--border-radius);
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color var(--transition-speed), transform var(--transition-speed);
+}
+
+.btn:hover {
+  background-color: var(--hover-color);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+/* standerd */
+.btn-primary {
+  background-color: var(--primary-color);
+  border-radius: var(--border-radius);
+}
+
+.btn-outline {
+  background: none;
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.btn-outline:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-disabled {
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+}
+
+/* effects */
+
+.btn-transform:hover {
+  transform: translateY(-2px);
+}
+
+.btn-scale {
+  transition: transform 0.3s ease;
+}
+.btn-scale:hover {
+  transform: scale(1.1);
+} 
+
+.btn-shadow {
+  transition: box-shadow 0.3s ease;
+}
+.btn-shadow:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 4. Underline with a Border */
+.btn-underline-border {
+  color: white;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+.btn-underline-border:hover {
+  border: 2px solid #000000;
+}
+
+.btn-rotate {
+  color: white;
+  transition: transform 0.3s ease;
+}
+.btn-rotate:hover {
+  transform: rotate(-5deg);
+}
+
+/* 8. Fill with Color */
+.btn-fill-color {
+  color: white;
+  border: 1px solid #007bff;
+  transition: all 0.3s ease;
+}
+.btn-fill-color:hover {
+  background-color: white;
+  color: #007bff;
+}
+
+
+
+/* Sizes */
+.btn-xsm {
+  font-size: 10px;
+  padding: 2px 8px;
+}
+
+.btn-sm {
+  font-size: 12px;
+  padding: 5px 10px;
+}
+
+.btn-md {
+  font-size: 15px;
+  padding: 10px 20px;
+}
+
+.btn-lg {
+  font-size: 20px;
+  padding: 15px 30px;
+}
+
+.btn-xlg{
+  font-size: 25px;
+  padding: 20px 35px;
+}
+
+/* Icon Buttons */
+.btn-icon i {
+  margin-right: 8px;
+}
+
+.btn-icon-only {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Block Button */
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .btn {
+    font-size: 14px;
+   
+  }
+}
+
+/* Focus Accessibility */
+.btn:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
